@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap Demo</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
 <body>
     <main role="main">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid"></div>
             <a class="navbar-brand" href="#">Intro To Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarsExampleDefault">
+        <span class="navbar-toggler-icon"></span></button>
             <a class="navbar-logo" href="#"><img src="images/shell.png" width="40px" height="40"></a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
@@ -28,9 +32,53 @@
                     </li>
                 </ul>
             </div>
-        </nav>
-        <div class="container">
-            <div class="jumbotron">
+                    </nav>
+            <div class="container">
+                        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="images/gas_station.jpe" alt="Gas Station" class="d-block w-100">
+                <div class="carousel-caption">
+                <h3>Gas Station</h3>
+                <p>We had such a great time in ShelL!</p>
+                </div>
+
+                </div>
+                <div class="carousel-item">
+                <img src="images/old_gas.jpg" alt="Old Gas Station" class="d-block w-100">
+                <div class="carousel-caption">
+                <h3>Old Shell</h3>
+                <p>Look at the quality!</p>
+                </div>
+
+                </div>
+                <div class="carousel-item">
+                <img src="images/gas_thing.webp" alt="Gas Machine" class="d-block w-100">
+                <div class="carousel-caption">
+                <h3>Gas Station Ads</h3>
+                <p>Wow those ads could be you!</p>
+                </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            </div>
+            <div class="p-5 mb-4 bg-light rounded-3">
                 <h1>This is bootstrap</h1>
                 <p>Bootstrap is an HTML, CSS, and Javascript Framework. It makes
                     web design easy.
@@ -53,22 +101,63 @@
                     <p>JS</p>
                     <p><a class="btn btn-secondary" href="#">More on JS</a></p>
                 </div>
+
                 <div class="container p-3 m-5 border">Learn where gas comes from and take classes on how to be a good employee at Shell!</div>
             </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                <h2>Shell</h2>
+                <p>Shell is a national gas station spread around the USA, providing gas for many</p>
+                </div>
+            
+            <div class="col-md-4">
+                <h2>History</h2>
+                <p>I'm not sure when it started but probably around the 2000s</p>
+            </div>
+
+            <div class="col-md-2">
+                <h2>Intern</h2>
+                <p>Learn how to become a Shell employee to support customers</p>
+            </div>
+
+            <div class="col-md-1">
+                <h2>Place</h2>
+                <p>basically everywhere</p>
+            </div>
+
+            <div class="col-md-1">
+                <h2>CEO</h2>
+                <p>I don't know who the CEO is but they're probably really rich now</p>
+            </div>
+            </div>
+            
+
         </div>
         
   <div class="col-*-*"></div>
   <div class="col-*-*"></div>
+
+  <div class="toast show">
+  <div class="toast-header">
+    Shell is so good and you should definitely get gas from there!
+    <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+  </div>
+  <div class="toast-body">
+    Wow I love Shell and all their amazing products and employees! The logo is so cool and so pleasing to the eyes and makes me want to donate money to Shell!
+  </div>
 </div>
-        </div>
+
         <hr>
         <footer>
             <p>&copy; Web Design 2026</p>
         </footer>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    
+<hr>
+<a class="btn btn-success">success</a>
+<a class="btn btn-danger">Danger</a>
+<a class="btn btn-outline primary">outline</a>
+<a class="btn btn-warning btn-sm">small</a>
+<a class="btn btn-success">success</a>
 </body>
 </html>
